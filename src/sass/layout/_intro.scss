@@ -1,0 +1,195 @@
+.intro-section {
+	width: $viewportwidth;
+	height: 90vh;
+	margin-top: 1rem;
+	position: relative;
+
+	@include respond(tab-land) {
+		height: 120rem;
+	}
+
+	@include respond(mobile-l) {
+		height: 45rem;
+	}
+}
+
+.intro {
+	max-width: 115rem;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	@include respond(tab-land) {
+		flex-direction: column;
+		width: $viewportwidth;
+	}
+
+	&__left {
+		width: 57rem;
+		position: relative;
+
+		@include respond(tab-land) {
+			height: 40%;
+			width: 100%;
+		}
+
+		@include respond(phone) {
+			height: 60%;
+		}
+
+		@include respond(mobile-l) {
+			height: 100%;
+		}
+	}
+
+	&__right {
+		padding: 1rem;
+		flex: 2;
+		position: relative;
+
+		@include respond(tab-land) {
+			flex: 1;
+			height: 60%;
+			width: 100%;
+			position: absolute;
+			top: 40%;
+
+		}
+
+		@include respond(tab-port) {
+			
+		}
+
+		@include respond(phone) {
+			
+
+		}
+
+		@include respond(mobile-l) {
+			display: none;
+			height: 0;
+		}
+
+		@include respond(mobile-m) {
+			
+		}
+
+		@include respond(mobile-s) {
+			
+		}
+	}
+
+	&__text {
+		width: 100%;
+		position: absolute;
+		top: 45%;
+		transform: translateY(-50%);
+		
+
+		@include respond(tab-land) {
+			height: 100%;
+			top: 55%;
+			text-align: center;
+		}
+	}
+
+	&__best {
+		font-size: 4rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		&-colored {
+			color: $color-blue;
+		}
+
+		@include respond(tab-land) {
+			font-size: 5rem;
+		}
+		@include respond(phone) {
+			font-size: 4rem;
+		}
+		@include respond(mobile-s) {
+			font-size: 3.5rem;
+		}
+	}
+
+	&__para {
+		margin-top: 2.5rem;
+		height: 13rem;
+		width: 100%;
+		font-size: 3rem;
+		font-weight: 300;
+
+		@include respond(tab-land) {
+			font-size: 4rem;
+		}
+
+		@include respond(phone) {
+			font-size: 3rem;
+		}
+
+		@include respond(mobile-s) {
+			font-size: 2.5rem;
+		}
+	}
+
+	&__trial {
+		margin-top: 6rem;
+		&-button {
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 0.8rem 1rem;
+			font-weight: 300;
+			font-size: 2.3rem;
+			color: white;
+			background-color: $color-green;
+
+			&:hover {
+				background-color: $color-dark-green;
+			}
+
+			@include respond(tab-land) {
+				font-size: 3.5rem;
+				padding: 1rem 1.5rem;
+			}
+
+			@include respond(phone) {
+				font-size: 3rem;
+			}
+
+			@include respond(mobile-s) {
+				font-size: 2.5rem;
+			}
+		}
+
+		@include respond(tab-land) {
+			margin-top: 10rem;
+		}
+
+		@include respond(phone) {
+			margin-top: 5rem;
+		}
+
+		@include respond(mobile-phone) {
+			margin-top: 3rem;
+		}
+	}
+
+	&__image {
+		width: 60rem;
+
+		@include respond(phone) {
+			width: 90%;
+		}
+
+		@include absCenter;
+
+		&-link {
+
+		}
+	}
+
+	@include respond(tab-port) {
+		width: 100%;
+	}
+}

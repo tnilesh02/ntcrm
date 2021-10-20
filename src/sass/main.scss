@@ -1,0 +1,21 @@
+// abstracts
+@import "./abstracts/_variables.scss";
+@import "./abstracts/_mixins.scss";
+
+// base
+@import "./base/_base.scss";
+@import "./base/_typography.scss";
+@import "./base/_utilities.scss";
+
+// Components 
+
+// layout
+@import "./layout/_header.scss";
+@import "./layout/_intro.scss";
+@import "./layout/_features.scss";
+@import "./layout/_reviews.scss";
+@import "./layout/_contactus.scss";
+@import "./layout/_footer.scss";
+
+// home
+@import "./pages/_home.scss";

@@ -1,0 +1,334 @@
+.show-modal {
+	width: $viewportwidth;
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	background-color: rgba(black,0.3);
+	z-index: 1101 !important;
+}
+
+.modal-box {
+	padding: 3rem 3rem;
+	height: 13rem;
+	background-color: white;
+	position: relative;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	border-radius: 3px;
+
+	@include respond(tab-port) {
+		
+		height: 20rem;
+		padding: 3rem 5rem;
+	}
+
+	@include respond(phone) {
+		height: 25rem;
+	}
+
+	@include respond(mobile-m) {
+		height: 35rem;
+	}
+}
+
+.modal-title {
+	font-size: 3rem;
+	font-weight: 600;
+	color: $color-blue;
+	margin-top: 2rem;
+
+	@include respond(tab-port) {
+		font-size: 4rem;
+	}
+
+	@include respond(phone) {
+		font-size: 5rem;
+	}
+
+	@include respond(mobile-m) {
+		margin-top: 3rem;
+	}
+}
+
+.close-modal {
+	position: absolute;
+	top:2rem;
+	right: 2rem;
+	text-decoration: none;
+	background-color: $color-blue;
+	border: 2px solid rgba($color-blue, 0.5);
+	border-radius: 3px;
+	padding: 0rem .5rem;
+	font-size: 1.5rem;
+	color: $color-white;
+	font-weight: 200;
+
+	&:hover {
+		background-color: white;
+		color: $color-blue;
+	}
+
+	@include respond(tab-port) {
+		font-size: 3rem;
+	}
+
+	@include respond(phone) {
+		font-size: 3.5rem;
+	}
+
+	@include respond(mobile-m) {
+		font-size: 4rem;
+	}
+}
+
+.no-show-modal {
+	display: none;
+	width: 0;
+}
+
+.contact-us-section {
+	width: $viewportwidth;
+	background-color: $color-white;
+	padding-bottom: 4rem;
+	position: relative;
+
+}
+
+.contact-us__title {
+	font-size: 4.5rem;
+	color: $color-blue;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin: 0rem auto;
+	width: 100%;
+	text-align: center;
+	padding-top: 1rem;
+
+	@include respond(tab-port) {
+		font-size: 5rem;
+	}
+
+	@include respond(phone) {
+		padding-top: 2rem;
+		font-size: 6rem;
+	}	
+}
+
+.contact-us {
+	width: 115rem;
+	margin: 0 auto;
+	display: flex;
+
+	&__left {
+		display: flex;
+
+		align-items: center;
+		padding: 0rem 1rem;
+		padding-left: 5rem;
+		
+		@include respond(tab-port) {
+			width: 100%;
+			justify-content: center;
+			padding-top: 2rem;
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		@include respond(phone) {
+			padding-right: 0;
+		}
+	}
+
+	&__form {
+
+	}
+
+	&__right {
+		padding: 5rem 0rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-grow:2;
+
+		@include respond(tab-land) {
+			flex-grow: 1;
+			padding-right: 0rem;
+		}
+
+		@include respond(tab-port) {
+			display: none;
+		}
+	}
+
+	&__image-box {
+
+	}
+
+	&__image {
+
+		height: 30rem;
+	}
+
+	@include respond(tab-land) {
+		width: $viewportwidth;
+	}
+}
+
+.form {
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		
+
+		&:not(:first-child) {
+			margin-top: 1.5rem;
+		}
+	}
+
+	&__label {
+		margin-bottom: .5rem;
+		font-size: 3rem;
+		font-weight: 400;
+		color: $color-blue;
+
+		@include respond(tab-port) {
+			font-size: 4rem;
+		}
+
+		@include respond(phone) {
+			font-size: 5rem;
+		}
+	}
+
+	&__input {
+
+		height: 4rem;
+		padding: 1rem;
+		color: $color-blue;
+		width: 35rem;
+		border: .5px solid rgba($color-black, 0.5);
+		border-radius: 3px;
+		font-size: 2rem;
+		font-weight: 400;
+		margin-left: 1.5rem;
+		margin-top: 0rem;
+
+		&::placeholder {
+			color: $color-blue;
+			font-weight: 300;
+			font-size: 2rem;
+
+			@include respond(tab-port) {
+				font-size: 3rem;
+				margin-left: 2rem;
+			}
+
+			@include respond(phone) {
+				font-size: 3.5rem;
+			}
+		}
+
+		@include respond(tab-port) {
+			font-size: 3rem;
+			height: 5rem;
+			width: 60rem;
+		}
+
+		@include respond(phone) {
+			height: 7rem;
+		}
+
+		@include respond(mobile-m) {
+			width: 55rem;
+		}
+
+		@include respond(mobile-s) {
+			width: 46rem;
+		}
+	}
+
+	&__textarea {
+		padding: 1rem;
+		resize: none;
+		color: $color-blue;
+		width: 35rem;
+		border: .5px solid rgba($color-black, 0.5);
+		border-radius: 3px;
+		font-size: 2rem;
+		font-weight: 400;
+		margin-left: 1.5rem;
+		height: 20rem;
+		font-family: "Poppins";
+		margin-top: 1rem;
+
+		&::placeholder {
+			color: $color-blue;
+			font-weight: 300;
+			font-size: 2rem;
+			font-family: "Poppins";
+
+			@include respond(tab-port) {
+				font-size: 3rem;
+			}
+
+			@include respond(phone) {
+				font-size: 3.5rem;
+			}
+		}
+
+		@include respond(tab-port) {
+			font-size: 3rem;
+			height: 25rem;
+			width: 60rem;
+		}
+
+		@include respond(phone) {
+			font-size: 3.5rem;
+			height: 30rem;
+		}
+
+		@include respond(mobile-m) {
+			width: 55rem;
+		}
+
+		@include respond(mobile-s) {
+			width: 46rem;
+		}
+	}
+
+	&__button {
+
+		padding: .3rem 1rem;
+		font-size: 2.5rem;
+		font-weight: 400;
+		font-family: "Poppins";
+		color: $color-white;
+		background-color: $color-blue;
+		
+		border: none;
+		border-radius: 3px;
+		margin: 1rem auto;
+
+		@include respond(tab-port) {
+			font-size: 3rem;
+			padding: .6rem 1.5rem;
+		}
+
+		@include respond(phone) {
+			font-size: 4rem;
+			margin-top: 2rem;
+			padding: 1rem 2rem;
+		}
+
+		@include respond(mobile-s) {
+			font-size: 4.5rem;
+			margin-top: 3rem;
+			padding: 1.2rem 2.3rem;
+		}
+	}
+}

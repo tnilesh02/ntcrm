@@ -1,0 +1,225 @@
+.features-section {
+	width: $viewportwidth;
+	
+	background-color: $color-grey-light;
+
+	@include respond(phone) {
+		margin-top: 5rem;
+	}
+
+	@include respond(mobile-l) {
+		margin-top: 0;
+	}
+}
+
+.features {
+	max-width: 115rem;
+	margin: 0 auto;
+	padding-bottom: 4rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+
+
+	&__title-box {
+		text-align: center; 
+		padding-top: 2rem;
+		
+	}
+
+	&__title {
+		font-size: 5rem;
+		text-transform: uppercase;
+		font-weight: 400;
+		color: $color-blue;
+
+		@include respond(tab-port) {
+			font-size: 6rem;
+		}
+	}
+
+	&__description {
+		width: 80%;
+		margin: 0 auto;
+		font-size: 2.5rem;
+		padding-bottom: 2rem;
+		color: $color-black;
+
+		@include respond(tab-port) {
+			font-size: 3rem;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 3rem;
+
+		@include respond(tab-port) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 3rem auto;
+			width: 100%;
+		}
+	}
+
+	&__box {
+		height: 45rem;
+		width: calc((100% - 2*(#{$features-gutter}))/3);
+		background-color: white;
+		box-shadow: 0rem 1rem 1rem rgba($color-black, .2);
+		border-top: 0.7rem solid $color-blue;
+		border-radius: 3px;
+		padding: 1.5rem 0rem;
+
+		&:not(:last-child){
+			margin-right: $features-gutter;
+		}
+
+		&-title {
+			height: 7rem;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 2.7rem;
+			font-weight: 600;
+			color: $color-blue;
+
+			@include respond(tab-land) {
+				font-size: 2.5rem;
+			}
+
+			@include respond(tab-port) {
+				font-size: 3rem;
+			}
+
+			@include respond(phone) {
+				font-size: 3.3rem;
+			}
+		}
+
+		&-description {
+			height: 9rem;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-size: 2rem;
+			font-weight: 300;
+			color: $color-black;
+			padding: 0rem 2rem;
+			margin-top: -.5rem;
+
+			@include respond(tab-land) {
+				font-size: 1.8rem;
+			}
+
+			@include respond(tab-port) {
+				font-size: 2.2rem;
+			}
+
+			@include respond(phone) {
+				font-size: 2.4rem;
+				padding: 1rem 2rem;
+				height: 13rem;
+			}
+		}
+
+		&-popular {
+			text-align: center;
+			font-size: 2.5rem;
+			margin-top: 2rem;
+			padding-top: .5rem;
+			padding-bottom: .5rem;
+			font-weight: 300;
+			border-top: 3px solid $color-grey;
+			border-bottom: 3px solid $color-grey;
+
+			@include respond(tab-port) {
+				font-size: 3rem;
+			}
+
+			@include respond(phone) {
+				font-size: 3.3rem;
+			}
+		}
+
+		&-list {
+			display: flex;
+			flex-direction: column;
+			padding: 2rem 2rem;
+
+			@include respond(tab-port) {
+				margin-left: 3rem;
+			}
+		}
+
+		&-items {
+			font-size: 2.3rem;
+			font-weight: 400;
+
+			@include respond(tab-land) {
+				font-size: 1.8rem;
+			}
+
+			@include respond(tab-port) {
+				font-size: 2.2rem;
+			}
+
+			@include respond(phone) {
+				font-size: 2.5rem;
+			}
+		}
+
+		&-icon {
+			color: $color-green;
+			font-size: 3rem;
+		}
+
+		@include respond(tab-port) {
+
+			width: 40rem;
+			
+			&:not(:last-child) {
+				margin-bottom: 5rem;
+				margin-right: 0;
+			}
+		}
+
+		@include respond(phone) {
+			height: 50rem;
+		}
+	}
+
+	&__trial {
+		text-align: center;
+		margin-top: 6rem;
+		&-button {
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 0.8rem 1rem;
+			font-weight: 300;
+			font-size: 2.3rem;
+			color: white;
+			background-color: $color-green;
+			box-shadow: 0rem .5rem 1rem rgba($color-black, .2);
+
+			&:hover {
+				background-color: $color-dark-green;
+			}
+
+			@include respond(tab-port) {
+				font-size: 2.6rem;
+			}
+
+			@include respond(phone) {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	
+}
