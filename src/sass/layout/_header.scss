@@ -172,6 +172,10 @@
 	&__title {
 		font-size: 4rem;
 	}
+
+	@include respond(tab-port) {
+		width: $viewportwidth;
+	}
 }
 
 .navigation {
@@ -218,4 +222,6 @@
 			}
 		}
 	}
+
+
 }

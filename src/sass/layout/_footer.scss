@@ -44,7 +44,7 @@
 	}
 
 	@include respond(tab-land) {
-		width: 100%;
+		width: $viewportwidth;
 		padding: 1.5rem;
 	}
 
